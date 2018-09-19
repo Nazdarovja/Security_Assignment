@@ -1,5 +1,13 @@
 Projekt idé: "Bad GDPR" designet webside.
 
+Gruppe info: 
+4
+Mathias B.
+Stanislav
+Alexander
+Mikkel Emil L.
+
+
 Lave hjemmeside hor man kan registrere sig (i en database).
 Indføre forskellig slags tracking, personlige oplysninger osv.
 Lader visse huller i design/best practice være åbne, for at kunne blive brugt som opgaver
