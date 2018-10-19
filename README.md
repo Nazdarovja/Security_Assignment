@@ -1,4 +1,4 @@
-# Projekt idé: "Bad GDPR" designet webside.
+# Projekt idé: TCP package sniffer.
 
 ## Gruppe info: 
 Gruppe 4
@@ -9,10 +9,10 @@ Alexander
 Mikkel Emil L.
 
 ## Projekt ide:
-Lave hjemmeside hor man kan registrere sig (i en database).
-Indføre forskellig slags tracking, personlige oplysninger osv.
-Lader visse huller i design/best practice være åbne, for at kunne blive brugt som opgaver
+Lav en hjemmeside der både benytter sig af http og https; Https når man logger på, men den videre kommunikation er http.
+Lav et tool til at monitorerer netværkstrafik (fx TCP), der kan opsnappe specikke keywords/filtreringsteknik.
+
 
 ### Ideer til opgaver: 
-- Identificere hvor systemet bør optimeres, finde fejl (hvor cookies ikke slettes, hvor bruger), hvor formålet er design mv. i henhold til GDPR.
-- foreslå til fix/lav fix
+- prøve at se hvor mange der ikke ser at forbindelsen skifter fra https til http ved login?
+- en beskrivelse/refleksion over hvad der skal til for at sikre en sikker trafik. 
