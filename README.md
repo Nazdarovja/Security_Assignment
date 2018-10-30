@@ -1,4 +1,4 @@
-# Projekt idé: TCP package sniffer.
+# Projekt idé: Treasure hunt
 
 ## Gruppe info: 
 Gruppe 4
@@ -9,10 +9,12 @@ Alexander
 Mikkel Emil L.
 
 ## Projekt ide:
-Lav en hjemmeside der både benytter sig af http og https; Https når man logger på, men den videre kommunikation er http.
-Lav et tool til at monitorerer netværkstrafik (fx TCP), der kan opsnappe specikke keywords/filtreringsteknik.
-
+    Lav en hjemmeside, der progressivt har nogen huller (i stigende sværhedsgrad), med supplerede hints, som er baseret på OWASP top 10.
+    Endgoal ville være at man skulle slette alt på databasen, (business impact).
+    (Lav en forklaring på hvordan man kunne lappe diverse huller)
 
 ### Ideer til opgaver: 
-- prøve at se hvor mange der ikke ser at forbindelsen skifter fra https til http ved login?
-- en beskrivelse/refleksion over hvad der skal til for at sikre en sikker trafik. 
+- Broken Access Control for at komme ind steder der ikke er til brugeren
+- SQL injection, for at finde oplysninger om database og tilsidst slette alt info
+- Sensetive data exposure, ved at kunne finde nogen passwords
+- Bruteforce hashede values ved at vi har password i top 10 passwords 
