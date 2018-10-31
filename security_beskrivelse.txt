@@ -5,7 +5,9 @@ Fx ved hjælp af default passwords, eller sessionid hijacking.
 
 Tema efter login siden: "skatte man kan søge efter"
 
-som indlogget bruger, skal man kunne søge i nogle felter efter et eller andet, fx søge efter nogle skatte (i databasen). Ved at SQL injecte er det muligt expose detaljer om skattene / data man ikke burde have adgang til. Alt efter hvor god brugeren er til det, kan de måske få alle brugere ud eller droppe hele DB.
+som indlogget bruger, skal man kunne søge i nogle felter efter et eller andet, fx søge efter nogle skatte (i databasen). 
+Ved at SQL injecte er det muligt expose detaljer om skattene / data man ikke burde have adgang til. 
+Alt efter hvor god brugeren er til det, kan de måske få alle brugere ud eller droppe hele DB.
 Hvis man får al data ud af DB, skal der være hints heri. En secret, som gør at man får admin rights / admin login info.
 MÅske være muligt at finde secret_key der er blevet brugt til encryption,  så hackeren kan bruge det til at decrypte / få acces til andre ting(?)
 
