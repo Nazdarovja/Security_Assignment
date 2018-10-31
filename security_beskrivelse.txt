@@ -1,35 +1,25 @@
-Lav Guide:
-- udarbejd et lille dokument med grøn, gul, rød manuel med større eller midnre beskrivelse af hvad der skal til, for at komme videre i skattejagten.
+Tema: "skatte man kan søge efter" - flere sider, man skal bryde ind i en ad gangen, for at komme videre til den næste.
 
-Tema: "skatte man kan søge efter" - fx 5 sider, man skal bryde ind i en ad gangen, for at komme videre til den næste.
+Første niveau: 
+Login side. Her skal det være muligt at oprette sig som bruger, og derved komme ind til en side, hvori der kan foretages SQL injections i felter.
 
-Første punkt: Login side hvor der skal tiltvinges sig adgang. 
-Fx ved hjælp af default passwords, eller sessionid hijacking.
-
-<<<<<<< HEAD
-Efterfølgende ideer:
-som indlogget bruger, skal man kunne søge i nogle felter efter et eller andet, fx søge efter nogle skatte (i databasen). Ved at SQL injecte er det muligt expose detaljer om skattene / data man ikke burde have adgang til. Alt efter hvor god brugeren er til det, kan de måske få alle brugere ud eller droppe hele DB.
+Anden niveau:
+Her skal det så være muligt at søge i nogle felter efter et eller andet, fx søge efter nogle skatte (i databasen). Ved at SQL injecte er det muligt expose detaljer om skattene / data man ikke burde have adgang til. Alt efter hvor god brugeren er til det, kan de måske få alle brugere ud eller droppe hele DB.
 Hvis man får al data ud af DB, skal der være hints heri. Måske en secret, som gør at man fx får admin rights / admin login info.
 (Måske være muligt at finde secret_key der er blevet brugt til encryption, fx. gemt et sted i JS koden, så hackeren kan bruge det til at decrypte / få acces til andre ting(?))
 
-2->3 niveau: via info man har fået via injection fra DB, fx et link til en hemmelig side, kan man få adgang til næste niveau. 
+-> heri skal være admin credentials. 
+passwordsene er base64 encodede og Mcrypt hashede, med hjemmelavet hashing algortime, uden flere rotationer over salt, og det er top 10 af kendte (så det er lettere at finde frem til). Hackeren skal altså bruteforce sig frem til admin passwordet.
+
+Bruger kan logge ud og ind igen som admin, og komme til niveau 3 [som så er en admin only side].
+
+Tredje niveau (admin side): 
+her skal det være muligt for admin at se diverse user details, og måske slette alle brugere osv. 
 
 
-
-
-=======
-Tema efter login siden: "skatte man kan søge efter"
-
-som indlogget bruger, skal man kunne søge i nogle felter efter et eller andet, fx søge efter nogle skatte (i databasen). 
-Ved at SQL injecte er det muligt expose detaljer om skattene / data man ikke burde have adgang til. 
-Alt efter hvor god brugeren er til det, kan de måske få alle brugere ud eller droppe hele DB.
-Hvis man får al data ud af DB, skal der være hints heri. En secret, som gør at man får admin rights / admin login info.
-MÅske være muligt at finde secret_key der er blevet brugt til encryption,  så hackeren kan bruge det til at decrypte / få acces til andre ting(?)
->>>>>>> ee73582670a287e85e77cc718206349c1c426ad1
-
-Broken Authentification / headers er det første man støder på. 
-
-Kunne også være "noget sensitivt" der kunne ligge i en af .js filerne.  
+To do:
+- udarbejd et lille dokument med grøn, gul, rød manuel med større eller mindre beskrivelse af hvad der skal til, for at komme videre i skattejagten.
+- lav repo (til de grønne?) med code snippets til at hjælpe med de forskellige dele, fx java del til at decrypte mv.
 
 
 Ressources:
