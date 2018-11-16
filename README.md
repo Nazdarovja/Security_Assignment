@@ -1,4 +1,4 @@
-# Projekt idé: Treasure hunt
+# Projekt idé: Hacking Royale : There can only be one
 
 ## Gruppe info: 
 Gruppe 4
@@ -18,3 +18,22 @@ Mikkel Emil L.
 - SQL injection, for at finde oplysninger om database og tilsidst slette alt info
 - Sensetive data exposure, ved at kunne finde nogen passwords
 - Bruteforce hashede values ved at vi har password i top 10 passwords 
+
+
+## Del 1 SQL Injection / Broken Access Control / Security Misconfiguration
+- Login side, her skal det være muligt at oprette sig som bruger, og derved komme ind til en side til almindelige brugere, hvori brugerne kan søge efter andre brugere. 
+
+
+
+## Del 2 Command Injection
+- En side med en "DNS lookup" hvor man kan søge en url og få lidt oplysninger om denne
+
+
+## Del 3 Insecure Deserialization / Code Injection / Using components with known vulnerabilities
+- Simpel side, der returnere en cookie, formålet er at slukke serveren, med et serialized object som indeholder oplysninger om en user.
+
+
+# (MULIGVIS)
+## Del 4 Presentation af Command Injection via deserialized backdoor
+- Oprette en backdoor i en applikation
+- bruge netcat til at forbinde til backdoor og eksekvere commandlines.
