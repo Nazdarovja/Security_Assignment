@@ -25,3 +25,7 @@ Mikkel Emil L.
 ## Del 4 Presentation af Command Injection via deserialized backdoor
 - Oprette en backdoor i en applikation
 - bruge netcat til at forbinde til backdoor og eksekvere commandlines.
+
+
+# TASKS
+
