@@ -26,6 +26,3 @@ Mikkel Emil L.
 - Oprette en backdoor i en applikation
 - bruge netcat til at forbinde til backdoor og eksekvere commandlines.
 
-
-# TASKS
-
