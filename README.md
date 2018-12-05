@@ -21,7 +21,6 @@ Mikkel Emil L.
 ## Del 3 Insecure Deserialization / Code Injection / Using components with known vulnerabilities
 - Simpel side, der returnere en cookie, formålet er at slukke serveren, med et serialized object som indeholder oplysninger om en user.
 
-# (MULIGVIS)
 ## Del 4 Presentation af Command Injection via deserialized backdoor
 - Oprette en backdoor i en applikation
 - bruge netcat til at forbinde til backdoor og eksekvere commandlines.
