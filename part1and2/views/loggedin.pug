@@ -1,0 +1,35 @@
+html
+block content
+  head
+    title= title
+    body(style={'text-align': 'center'})
+        h1= title
+        h2 Search db for other users!
+        form(action='/login', method='GET')
+                    button(type= 'submit') Logout
+        if user
+            if user.role == 'admin'
+                form(action='/dns', method='POST')
+                    button(type= 'submit') To second assignment
+        form(method='POST' action='/loggedin')
+            div.form-group
+                input(type='text', placeholder='Search me.. hæhæhhæh' name='search')
+                br
+                br
+                button.btn.btn-primary(type='submit') Search
+        if users
+            h2 USERS: 
+            if users.length <= 2
+                each user in users
+                    each item in user
+                        each key in Object.keys(item)
+                            p= key + ': ' + item[key]
+                        p= "---------------------------"
+            else 
+                each user in users
+                    each key in Object.keys(user)
+                        p= key + ': ' + user[key]
+                    p= "---------------------------"
+        if error
+            p= error
+        

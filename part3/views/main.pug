@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+  body(style={'text-align': 'center'})
+    h1= title
+    div(style={'border-style': 'solid'})
+        h3= "- Success is not final, failure is not fatal:"
+        h3= "  it is the courage to continue that counts."
+    if username
+        p= 'Hello ' + username
+    if !username
+        p= 'Hello stranger'
+        p(style={'color': 'white'})= 'Do you like cookies ? *wink* *wink*'
+
+    
+    script.
+        (() => {
+            setTimeout(() => {
+                document.body.innerHTML += `<img style=width:50px;height:50px; src='cookie.jpg' title='MAYBE THIS WILL HELP : https://www.base64decode.org/'>`
+            }, 20000)
+        })()

@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body(style={'text-align': 'center'})
+    h1= title
+    h2= "This is a DNS lookup"
+    form(action='/dns/search', method='POST')
+        input(name= 'url', type='text')
+        button(type= 'submit') dns lookup
+    h4= stdout
+    h4= stderr
+

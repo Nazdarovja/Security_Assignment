@@ -1,0 +1,19 @@
+doctype html
+html
+block content
+  head
+    title= title
+  body(style={'text-align': 'center'})
+    block content
+    h1 Login page
+    form(method='POST' action='/login')
+        div.form-group
+            input#name.form-control(type='text', placeholder='Enter username..' name='username')
+            br
+            br
+            input#email.form-control(type='password', placeholder='Enter password..' name='password')
+            br
+            br
+            button.btn.btn-primary(type='submit') Login
+    if error
+        p= error

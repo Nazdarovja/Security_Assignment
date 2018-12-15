@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+  title= title
+  body(style={'text-align': 'center'})
+    block content
+    h1= "Hacking Royale :"
+    h2(style={'font-style':'italic', 'text-decoration': 'underline'})= "There can only be one"
+        br
+        br
+        h3="Register form"
+        form(method='POST' action='/register')
+            div.form-group
+                input(type='hidden', name='register')
+                input(type='text', name='username', placeholder="Enter username....")
+                br
+                br
+                input(type='password', name='passwd', placeholder='Enter password....')
+                br
+                br
+                button.btn.btn-primary(type='submit') Register
+        if registered   
+            p You've been registered
+            a(class='button' href='/login') Go to login   
+        if error
+            p= error             
