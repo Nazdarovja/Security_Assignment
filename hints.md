@@ -1,4 +1,4 @@
-# Hints til opgaver
+# Hints for assignments
 This took us around 45mins for people introduced to all these security issues before. The time for the hints can vary and must be "felt" in the room when running the game.
 
 ## Part One SQL Injection / Broken Access Control / Security Misconfiguration

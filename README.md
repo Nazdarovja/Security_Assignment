@@ -1,5 +1,7 @@
 # Hacking Royale : "There can only be one"
-This is a semester project for Security course, this project is created as a "game" where you have to hack to advance.
+This is a semester project for Security course. This project is created as a "game" where you have to hack to advance.
+
+![overview image](overview.png)
 
 ## Project idea:
     
@@ -24,7 +26,7 @@ As mentioned above, this project should be deployed on a linux machine(a virtual
 - Create a user without sudo privileges (Important!)
 ```
 
-First you have to install MySQL server on your linux installation
+First: You have to install MySQL server on your linux installation
 ``` 
 $apt-get mysql-server
 create new mysql user
@@ -33,20 +35,20 @@ then run the script provided in \part1and2\db_script.sql
 (the provided two users are for test purposes, and should be removed when running the game)
 ```
 
-Second install node on the server/ only ubuntu guide is providede
+Second: Install Node.js on the server/ only ubuntu guide is provided
 
 ```
 Install NodeJS following guide in this link : 
 https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/
 ```
 
-Third for running the application when deployed install a process manager
+Third: For running the application when deployed install a process manager; pm2
 
 ```
 $sudo npm install pm2 -g
 ```
 
-Fourth install whois, that is required for second part
+Fourth: Install whois, that is required for second part
 ```
 $sudo apt-get install whois
 ```
@@ -56,7 +58,8 @@ $sudo apt-get install whois
 A step by step series of examples that tell you how to get a development env running
 
 First clone the project, this project is broken up in two folders
-Go to root folder of the project then run following commands
+
+Go to root folder of the project then run following commands:
 ```
 install dependencies for the projects
 $cd part1and2
@@ -67,13 +70,13 @@ $npm install
 
 Next you have to supply login info for MySQL
 
-Go to part1and2 folder and add your credentials
+Go to part1and2 folder and add your credentials to the dbfacade.js file:
 ```
-$cd part1and2/facade
+$cd part1and2/facade/dbfacade.js
 change credentails to your own
 ```
 
-Now the project is ready to run (as two seperate projects)
+Now the project is ready to run (as two seperate projects on the server)
 (The second part and fourth/demo part will only work on a macOS/ or linux)
 ```
 For Part 1 and 2
@@ -94,11 +97,14 @@ scp or clone the repo to your server
 Next go to project root folder and run following commands
 $cd part1and2
 $pm2 start bin/www
+- will be run on port 3000 by default
+
 $cd ../part3
 $npm start
+- will be run on port 3333 by default
 ```
 Now the application is running, the first and second part will be managed by the process manager(remember to stop it after using it because it is really hackable).
-The third part is not setup to restart, because it is even more hackable and is victim to code injection, so the server can be hijacked via your application. Also this serves the purpouse that you can see who wins the race, because the server will be terminated, and the last print is from the winner.
+The third part is not setup to restart, because it is even more hackable and is victim to code injection, so the server can be hijacked via your application. Also this serves the purpouse that you can see who wins the race, because the server will be terminated, and the last print is from the winner. For a class demo, run part3 from a terminal, mirrored to a projector, so you and the class can see the progress.
 
 
 # Short assignment descriptions
