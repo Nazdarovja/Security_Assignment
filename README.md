@@ -145,3 +145,7 @@ Group 4
 * **Mathias Bigler** - *developer* - [Zurina](https://github.com/Zurina)
 * **Mikkel Emil Larsen** - *developer* - [mikkel7emil](https://github.com/mikkel7emil)
 * **Stanislav Novitski** - *developer* - [Stani2980](https://github.com/Stani2980)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
