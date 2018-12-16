@@ -11,10 +11,10 @@ This is a semester project for Security course. This project is created as a "ga
 
 ##  Getting started
 The supplied instructions will get the project up and running locally, but for the project to function it should be run on a linux machine.
-For our example we used cheap droplet on DigitalOcean running Linux Ubuntu 18.4, one should also create a user without `sudo` privileges to the server.
+For our example we used a cheap droplet on Digital Ocean running Linux Ubuntu 18.4, one should also create a user without `sudo` privileges to the server.
 
 (Some of the hacks makes the user exposed to the hacker, and to limit the damage we recommend using a regular and not `sudo` user)
-Further more there should be created a MySQL database and according user to the database(also with some restrictions).
+Further more there should be created a MySQL database and also user to the database(also with some restrictions).
 
 ### Prerequisites
 
@@ -57,7 +57,7 @@ $sudo apt-get install whois
 
 A step by step series of examples that tell you how to get a development env running
 
-First clone the project, this project is broken up in two folders
+First clone the project, this project is divided in two folders
 
 Go to root folder of the project then run following commands:
 ```
@@ -104,7 +104,7 @@ $npm start
 - will be run on port 3333 by default
 ```
 Now the application is running, the first and second part will be managed by the process manager(remember to stop it after using it because it is really hackable).
-The third part is not setup to restart, because it is even more hackable and is victim to code injection, so the server can be hijacked via your application. Also this serves the purpouse that you can see who wins the race, because the server will be terminated, and the last print is from the winner. For a class demo, run part3 from a terminal, mirrored to a projector, so you and the class can see the progress.
+The third part is not setup to restart, because it is even more hackable and is victim to code injection, so the server can be hijacked via your application. Also this serves the purpose that you can see who wins the race, because the server will be terminated, and the last print is from the winner. For a class demo, run part3 from a terminal, mirrored to a projector, so you and the class can see the progress.
 
 
 # Short assignment descriptions
@@ -113,7 +113,8 @@ These are the assignments for the game and an extra demo which demonstrates a mo
 ## Part One SQL Injection / Broken Access Control / Security Misconfiguration
 - Login site, here it should be possible to register new user, and get to a site for regular users where there is a search bar to search for other users.
 - Next the user should use SQL Injections and elevate their role, to admin.
-- And lastly user should re-login to get to the admin site.
+- And lastly user should re-login to get to the admin site (logging out in terms of going to the login page and login again.
+There is no actual login state).
 
 ## Part Two Command Injection
 - A simple site with a DNS lookup, where you can get some info about other domains.
